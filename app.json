@@ -1,0 +1,93 @@
+{
+    "id": "a00bed39-1e0e-43d1-9df7-861dab567005",
+    "name": "Vi-Creation_Plugin",
+    "publisher": "AF Cloud",
+    "version": "1.5.0.1",
+    "brief": "Package For V.I Creation",
+    "description": "V.I Creation Extension",
+    "privacyStatement": "",
+    "EULA": "",
+    "help": "",
+    "url": "",
+    "logo": "",
+    "dependencies": [
+        {
+            "id": "437dbf0e-84ff-417a-965d-ed2bb9650972",
+            "name": "Base Application",
+            "version": "25.0.23364.25996",
+            "publisher": "Microsoft"
+        },
+        {
+            "id": "ec255f57-31d0-4ca2-b751-f2fa7c745abb",
+            "name": "Shopify Connector",
+            "version": "25.0.23364.25488",
+            "publisher": "Microsoft"
+        },
+        {
+            "id": "63ca2fa4-4f03-4f2b-a480-172fef340d3f",
+            "name": "System Application",
+            "version": "25.0.23364.24925",
+            "publisher": "Microsoft"
+        },
+        {
+            "id": "f3552374-a1f2-4356-848e-196002525837",
+            "name": "Business Foundation",
+            "version": "25.0.23364.24925",
+            "publisher": "Microsoft"
+        },
+        {
+            "id": "70912191-3c4c-49fc-a1de-bc6ea1ac9da6",
+            "name": "Intrastat Core",
+            "version": "25.0.23364.25267",
+            "publisher": "Microsoft"
+        },
+        {
+            "id": "1096d1ca-2c0c-4a0e-aa0d-c734021aba2b",
+            "name": "Intrastat FR",
+            "version": "25.0.23364.25138",
+            "publisher": "Microsoft"
+        },
+        {
+            "id": "c526b3e9-b8ca-4683-81ba-fcd5f6b1472a",
+            "name": "Sales and Inventory Forecast",
+            "version": "25.1.25873.26186",
+            "publisher": "Microsoft"
+        },
+        {
+            "id": "b3780cd9-f8f8-4a83-a4d5-0c2ad87b28af",
+            "name": "Sustainability",
+            "version": "25.1.25873.26186",
+            "publisher": "Microsoft"
+        },
+        {
+            "id": "3099ffc7-4cf7-4df6-9b96-7e4bc2bb587c",
+            "name": "Subscription Billing",
+            "version": "25.1.25873.28089",
+            "publisher": "Microsoft"
+        },
+        {
+            "id": "16319982-4995-4FB1-8FB2-2B1E13773E3B",
+            "name": "AMC Banking 365 Fundamentals",
+            "publisher": "Microsoft",
+            "version": "26.0.30643.32695"
+        }
+    ],
+    "screenshots": [],
+    "platform": "1.0.0.0",
+    "application": "26.0.30643.32100",
+    "idRanges": [
+        {
+            "from": 50100,
+            "to": 51000
+        }
+    ],
+    "resourceExposurePolicy": {
+        "allowDebugging": true,
+        "allowDownloadingSource": true,
+        "includeSourceInSymbolFile": true
+    },
+    "runtime": "15.0",
+    "features": [
+        "NoImplicitWith"
+    ]
+}
