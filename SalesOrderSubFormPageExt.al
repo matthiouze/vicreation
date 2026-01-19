@@ -37,6 +37,14 @@ pageextension 50108 SalesOrderSubFormPageExt extends "Sales Order Subform"
         {
             Visible = false;
         }
+        modify("Customer Contract No.")
+        {
+            Visible = false;
+        }
+        modify("Vendor Contract No.")
+        {
+            Visible = false;
+        }
         modify(Description)
         {
             Caption = 'Désignation';
