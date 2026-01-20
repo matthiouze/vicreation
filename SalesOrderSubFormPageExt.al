@@ -45,6 +45,10 @@ pageextension 50108 SalesOrderSubFormPageExt extends "Sales Order Subform"
         {
             Visible = false;
         }
+        modify("Item Charge Qty. to Handle")
+        {
+            Visible = false;
+        }
         modify(Description)
         {
             Caption = 'Désignation';

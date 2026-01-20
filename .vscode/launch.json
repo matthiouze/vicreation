@@ -1,18 +1,18 @@
 {
-    "version": "1.1.0",
+    "version": "1.1.2",
     "configurations": [
         {
             "name": "Microsoft cloud sandbox",
             "request": "launch",
             "type": "al",
             "environmentType": "Sandbox",
-            "environmentName": "SandBox-Test-Utilisation",
+            "environmentName": "Restored2",
             "startupObjectId": 22,
             "startupObjectType": "Page",
             "breakOnError": "All",
             "launchBrowser": true,
             "enableLongRunningSqlStatements": true,
             "enableSqlInformationDebugger": true
-        },
+        }
     ]
 }
