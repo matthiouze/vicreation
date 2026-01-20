@@ -10,5 +10,17 @@ pageextension 50181 SalesOrderListExt extends "Sales Order List"
         {
             Visible = false;
         }
+        modify("Location Code")
+        {
+            Visible = false;
+        }
+        modify("Amt. Ship. Not Inv. (LCY) Base")
+        {
+            Visible = false;
+        }
+        modify("Amt. Ship. Not Inv. (LCY)")
+        {
+            Visible = false;
+        }
     }
 }
