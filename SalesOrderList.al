@@ -6,5 +6,9 @@ pageextension 50181 SalesOrderListExt extends "Sales Order List"
         {
             Visible = false;
         }
+        modify("Assigned User ID")
+        {
+            Visible = false;
+        }
     }
 }
