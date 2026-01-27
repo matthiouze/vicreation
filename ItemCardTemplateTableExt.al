@@ -161,6 +161,7 @@ tableextension 50108 ItemCardTemplateTableExt extends Item
         {
             Caption = 'Article Client';
             DataClassification = ToBeClassified;
+            Editable = true;
 
             trigger OnValidate()
             begin
@@ -175,6 +176,7 @@ tableextension 50108 ItemCardTemplateTableExt extends Item
             Caption = 'N° Client';
             TableRelation = Customer;
             ValidateTableRelation = false;
+            Editable = true;
 
             trigger OnValidate()
             var

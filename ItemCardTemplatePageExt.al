@@ -110,6 +110,12 @@ pageextension 50107 ItemCardTemplatePageExt extends "Item Card"
             field(ArticleClient; Rec.ArticleClient)
             {
                 ApplicationArea = All;
+                Editable = IsArticleClientEditable;
+                
+                trigger OnValidate()
+                begin
+                    CurrPage.Update(false);
+                end;
             }
             group(RelationClient)
             {
@@ -406,6 +412,23 @@ pageextension 50107 ItemCardTemplatePageExt extends "Item Card"
     var
         IsArticleClientEditable: Boolean;
 
+    trigger OnOpenPage()
+    begin
+        SetArticleClientEditable();
+    end;
+
+    trigger OnNewRecord(BelowxRec: Boolean)
+    begin
+        // Lors de la création d'un nouvel article, initialiser à true
+        IsArticleClientEditable := true;
+        CurrPage.Update(false);
+    end;
+
+    trigger OnAfterGetRecord()
+    begin
+        SetArticleClientEditable();
+    end;
+
     trigger OnAfterGetCurrRecord()
     begin
         SetArticleClientEditable();
@@ -415,6 +438,12 @@ pageextension 50107 ItemCardTemplatePageExt extends "Item Card"
     var
         ItemLedgerEntry: Record "Item Ledger Entry";
     begin
+        // Si le numéro est vide, c'est une création → éditable
+        if Rec."No." = '' then begin
+            IsArticleClientEditable := true;
+            exit;
+        end;
+
         // Vérifier s'il existe des écritures comptables pour cet article
         ItemLedgerEntry.SetRange("Item No.", Rec."No.");
         IsArticleClientEditable := ItemLedgerEntry.IsEmpty();
