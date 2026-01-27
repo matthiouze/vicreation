@@ -115,9 +115,11 @@ pageextension 50107 ItemCardTemplatePageExt extends "Item Card"
             {
                 Visible = Rec.ArticleClient;
                 Caption = 'Article Client';
+                Editable = IsArticleClientEditable;
                 field(ClientRelation; Rec.ClientRelation)
                 {
                     ApplicationArea = All;
+                    Editable = IsArticleClientEditable;
                 }
                 field(NomClientRelation; Rec.NomClientRelation)
                 {
@@ -400,5 +402,21 @@ pageextension 50107 ItemCardTemplatePageExt extends "Item Card"
     }
     var
         ItemHelper: Codeunit ItemCalculationHelper;
-        ShowClientReference: Boolean;
+
+    var
+        IsArticleClientEditable: Boolean;
+
+    trigger OnAfterGetCurrRecord()
+    begin
+        SetArticleClientEditable();
+    end;
+
+    local procedure SetArticleClientEditable()
+    var
+        ItemLedgerEntry: Record "Item Ledger Entry";
+    begin
+        // Vérifier s'il existe des écritures comptables pour cet article
+        ItemLedgerEntry.SetRange("Item No.", Rec."No.");
+        IsArticleClientEditable := ItemLedgerEntry.IsEmpty();
+    end;
 }
